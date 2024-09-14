@@ -1,0 +1,95 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet"  href="{% static 'css\style.css' %}">
+	 <link rel="stylesheet"  href="{% static 'css\bootstrap.min.css' %}">
+	<title></title>
+</head>
+<style>
+	body{background-color:#00437c }
+table, th, td {
+	background-color:#00a6c9
+  border:1px solid black;
+
+
+}
+div{
+	
+	background: none repeat scroll 0 0 #cff4fc;
+
+    border-radius: 10px 10px 10px 10px;
+    margin: auto;
+    padding: 15px;
+    width: 195px;
+}
+#tables{
+	border-radius: 10px 10px 10px 10px;
+}
+div:hover {
+  background-color: #00a6c9;
+}
+
+</style>
+<body>
+	
+
+	<div align="center">
+  <p align="center">Your predicted result:<br> <br>{{tahmim}}</p>
+</div>
+    			
+    			
+    			
+  		<br>
+  		<br>
+  		<br>		
+	<form method="GET">
+		<table class="table table-primary table-hover table-bordered" id="tables" style="width:80%" align="center">
+			
+  			<tr class="table-info">
+  				<td>SUGGESTIONS</td>
+    			<td>TITLE </td>
+    			<td>VIEWS </td>
+    			<td>LIKES </td>
+    			<td>DISLIKES </td>
+    			<td>PUBLISH DATE</td>
+    			<td>TRENDING DAY COUNT</td>
+  			</tr>
+  			<tr>
+  				<td>First Suggestions:</td>
+    			<td>{{tags1}} </td>
+    			<td>{{views0}} </td>
+    			<td>{{likes0}} </td>
+    			<td>{{dislike0}} </td>
+    			<td>{{paylasim0}} </td>
+    			<td>{{trend_day0}} </td>
+  			</tr>
+  			<tr class="table-info">
+  				<td>Second Suggestions:</td>
+    			<td>{{tags2}} </td>
+    			<td>{{views1}} </td>
+    			<td> {{likes1}}</td>
+    			<td>{{dislike1}} </td>
+    			<td>{{paylasim1}} </td> 
+    			<td>{{trend_day1}} </td>
+  			</tr>
+  			<tr>
+  				<td>Third Suggestions:</td>
+    			<td> {{tags3}}</td>
+    			<td> {{views2}}</td>
+    			<td> {{likes2}}</td>	
+    			<td>{{dislike2}} </td>	
+    			<td>{{paylasim2}} </td>	
+    			<td>{{trend_day2}} </td>		
+  			</tr>
+		</table>
+
+  		
+    </form>
+    
+
+  		
+</body>
+</html>
